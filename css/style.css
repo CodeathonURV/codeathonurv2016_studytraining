@@ -5,16 +5,24 @@
 }
 
 .row {
-  clear:both;
-  width:900px;
+  height: 100%;
 }
+
 .sidenav{
-  width:200px;
   float:left;
+  width:15%;
+  /*
   overflow-y: scroll;
   overflow:hidden
   max-height:100% ;
   min-height:500px;
+  */
+}
+
+.contingut{
+  float:left;
+  padding: 50px;
+  width:75%;
 }
 
 .login{
@@ -25,4 +33,45 @@
 	padding: 24px;
 	flex: none;
 }
+
+.mdl-layout__header a{
+	color:white;
+  text-decoration: none;
+}
+
+.salir{
+  font-size: 15px;
+  float:right;
+  margin-left:30px;
+}
+
+
+#clockdiv{
+  font-family: sans-serif;
+  color: #fff;
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  font-size: 30px;
+}
+
+#clockdiv > div{
+  padding: 10px;
+  border-radius: 3px;
+  background: #512DA8;
+  display: inline-block;
+}
+
+#clockdiv div > span{
+  padding: 15px;
+  border-radius: 3px;
+  background: #009688;
+  display: inline-block;
+  text-align:center;
+}
+
+
+.smalltext{
+  padding-top: 5px;
+  font-size: 16px;
 }

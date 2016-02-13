@@ -30,13 +30,14 @@
 
 							if (isset($_SESSION['email'])) {
 							?>
-							<a class="mdl-layout-title" href="logout.php"><span class="mdl-layout__title-text">Salir</span></a>
+							<a class="mdl-layout-title salir" href="logout.php"><span class="mdl-layout__title-text">Salir</span></a>
 							<?php } ?>
 						</div>
 					</div>
 				</header>
 
 			<div class="row">
+				
 				<?php include('main.php') ?>
 			</div>
 	</body>

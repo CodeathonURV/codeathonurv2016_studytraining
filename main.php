@@ -12,13 +12,13 @@ if (!isset($_SESSION['usuari'])) {
 
 ?>		
 <!-- Menu esquerra -->
-<nav class="sidenav">
+<div class="sidenav">
 	<?php include('sidenav.php'); ?>
-</nav>
+</div>
 <?php } ?>
 
 
 <!-- Contingut -->
-<section class="contingut">
+<div class="contingut">
 	<?php include("$action.php"); ?>
-</section>
+</div>

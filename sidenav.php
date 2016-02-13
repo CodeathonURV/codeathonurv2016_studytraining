@@ -1,29 +1,29 @@
 
-	<?php $grado = "hola" ?>
+
 <ul class="demo-list-item mdl-list">
 	<li class="mdl-list__item">
 		<span class="mdl-list__item-primary-content">
-		<a class="mdl-navigation__link" href="?action=scoreglobal">ScoreBoard Global</a>
+		<a class="mdl-navigation__link" href="?action=scoreglobal">Ranking Global</a>
 		</span>
 	</li>
 
 	<hr>
 	<li class="mdl-list__item">
-		<span class="mdl-layout-title-text"><?php echo $grado ?></span>
+		<span class="mdl-layout-title-text"><?php echo $_SESSION['grado'] ?></span>
 	</li>
 	<li class="mdl-list__item">
 		<span class="mdl-list__item-primary-content">
-			<a class="mdl-navigation__link" href="?action=information">Information</a>
+			<a class="mdl-navigation__link" href="?action=information">Problema</a>
 		</span>
 	</li>
 	<li class="mdl-list__item">
 		<span class="mdl-list__item-primary-content">
-			<a class="mdl-navigation__link" href="?action=submission">Submission</a>
+			<a class="mdl-navigation__link" href="?action=submission">Solución</a>
 		</span>
 	</li>
 	<li class="mdl-list__item">
 		<span class="mdl-list__item-primary-content">
-			<a class="mdl-navigation__link" href="?action=scoreboard">Scoreboard</a>
+			<a class="mdl-navigation__link" href="?action=scoreboard">Ranking</a>
 		</span>
 	</li>
 </ul>

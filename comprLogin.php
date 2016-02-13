@@ -9,11 +9,11 @@ function comprova($usuari, $pwd) {
         if($usuari == "jordi" && $pwd=="jordi"){
             $_SESSION['usuari'] = $usuari;
             $_SESSION['email'] = "jordi.merino@estudiants.urv.cat";
-            $_SESSION['grado']="informatica";
+            $_SESSION['grado']="Informatica";
         }else if($usuari == "pepe" && $pwd=="pepe") {
             $_SESSION['usuari'] = $usuari;
             $_SESSION['email'] = "pepe@estudiants.urv.cat";
-            $_SESSION['grado']="telematica";
+            $_SESSION['grado']="Telematica";
         }
         header("location:index.php");
 }
