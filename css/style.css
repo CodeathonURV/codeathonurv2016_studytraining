@@ -4,19 +4,25 @@
 	background-color: smoke;
 }
 
-/*Targetes*/
-.demo-card-square.mdl-card {
-  width: 320px;
-  height: 320px;
-  float: left;
-  margin: 20px;
+.row {
+  clear:both;
+  width:900px;
 }
-.demo-card-square > .mdl-card__title {
-  color: #fff;
-  background:
-    url('http://www.getmdl.io/assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;
+.sidenav{
+  width:200px;
+  float:left;
+  overflow-y: scroll;
+  overflow:hidden
+  max-height:100% ;
+  min-height:500px;
 }
-#inner{
-    width: 70%;
-    margin: 0 auto;
+
+.login{
+	align-items: center;
+  	justify-content: center;
+}
+.login .mdl-layout__content {
+	padding: 24px;
+	flex: none;
+}
 }
