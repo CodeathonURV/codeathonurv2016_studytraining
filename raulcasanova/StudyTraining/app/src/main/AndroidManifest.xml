@@ -18,7 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ScoreBoardActivity"></activity>
+        <activity android:name=".ScoreBoardActivity" />
+        <activity android:name=".GlobalScoreBoard"></activity>
     </application>
 
 </manifest>

@@ -71,12 +71,13 @@ public class Navigation extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_globalscore) {
-            Intent myIntent = new Intent(Navigation.this, ScoreBoardActivity.class);
+            Intent myIntent = new Intent(Navigation.this, GlobalScoreBoard.class);
             startActivityForResult(myIntent, 0);
         } else if (id == R.id.nav_info) {
 
         } else if (id == R.id.nav_infoscore) {
-
+            Intent myIntent = new Intent(Navigation.this, ScoreBoardActivity.class);
+            startActivityForResult(myIntent, 0);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
