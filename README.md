@@ -1,2 +1,2 @@
 # codeathonurv2016_studytraining
-#initial commit
+initial commit
