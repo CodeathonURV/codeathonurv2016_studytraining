@@ -12,14 +12,22 @@
     tools:context="cat.urv.studytraining.studytraining.Navigation"
     tools:showIn="@layout/app_bar_navigation">
 
-    <ListView
+    <ListView android:id="@+id/listScoreBoard"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </ListView>
+
+    <TextView android:id="@+id/name_ScoreBoard"
+        android:layout_width="300dip"
         android:layout_height="wrap_content"
-        android:id="@+id/listScoreBoard"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="false"
-        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/listScoreBoard"
+        android:layout_alignParentTop="true" />
+
+    <TextView android:id="@+id/score_ScoreBoard"
+        android:layout_width="50dip"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/listScoreBoard"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        tools:listitem="@android:layout/simple_list_item_1" />
+        android:layout_alignRight="@+id/name_ScoreBoard" />
+
 </RelativeLayout>
