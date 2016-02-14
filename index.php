@@ -4,9 +4,8 @@
 		<!-- Material Design Lite -->
 		<script src="mdl/material.min.js"></script>
 		<link rel="stylesheet" href="mdl/material.min.css">
-		<!-- Material Design icon font -->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<link rel="stylesheet" href="css/style.css">
+		<title>Study Training</title>
 	</head>
 	
 	<?php 

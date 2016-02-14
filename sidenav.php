@@ -18,7 +18,7 @@
 	</li>
 	<li class="mdl-list__item">
 		<span class="mdl-list__item-primary-content">
-			<a class="mdl-navigation__link" href="?action=submission">Solución</a>
+			<a class="mdl-navigation__link" href="?action=submission">Soluci&oacute;n</a>
 		</span>
 	</li>
 	<li class="mdl-list__item">

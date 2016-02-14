@@ -1,3 +1,4 @@
+<h3>Informaci&oacute;n del Problema</h3>
 <div>
 	<svg fill="#000000" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg" fit="" preserveAspectRatio="xMidYMid meet">
 		<path d="M0 0h24v24H0z" fill="none"></path>
@@ -13,7 +14,7 @@
 	</svg>
 	<i>Empieza el </i>
 
-	Lunes, Feb 15,
+	Lunes, Ene 15,
 	<b>01:00 hora local</b>
 </div>
 
@@ -29,11 +30,11 @@
 
 
 <h4>Descargar</h4>
-<p>A continuación se encuentra el enunciado del problema en formato <b>PDF</b>.</p>
-<p>Además, si es necesario, también se encuentran los archivos para recoger la información.</p>
+<p>A continuaci&oacute;n se encuentra el enunciado del problema en formato <b>PDF</b>.</p>
+<p>Adem&aacute;s, si es necesario, tambi&eacute;n se encuentran los archivos para recoger la informaci&oacute;n.</p>
 
 
-<a href="">
+<a href="problemas/delivery.pdf" target="_blank">
 	<div class="md-list-item-text">
 		<svg fill="#000000" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg" fit="" preserveAspectRatio="xMidYMid meet">
 			<path d="M0 0h24v24H0z" fill="none"></path>
@@ -44,7 +45,7 @@
 </a>
 <br />
 
-<a href="">
+<a href="problemas/busy_day.in" target="_blank">
 	<div class="md-list-item-text ng-binding">
 		<svg fill="#000000" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg" fit="" preserveAspectRatio="xMidYMid meet">
 			<path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"></path>
