@@ -1,5 +1,6 @@
 package cat.urv.studytraining.studytraining.fragments;
 
+import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -7,65 +8,76 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 import cat.urv.studytraining.studytraining.R;
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link ContentFragment.OnFragmentInteractionListener} interface
+ * {@link ScoreBoardFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link ContentFragment#newInstance} factory method to
- * create an instance of this fragment.
  */
-public class ContentFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+public class ScoreBoardFragment extends Fragment {
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private static final String KEY_NAME = "KEY_NAME";
+    private static final String KEY_SCORE = "KEY_SCORE";
+
+    private static final String[] staticName = {
+            "Raúl Casanova Marqués",
+            "Jordi Merino Domingo",
+            "Oriol Mauri Guiu",
+            "Ana Lopez Rubio",
+            "David Reyes Garcia",
+            "Silvia Lopez Clotet",
+            "Nuria Fernandez Diaz",
+            "Diego Hernandez Castillo"
+    };
+
+    private static final String[] staticScore = {
+            "12543",
+            "8546",
+            "7456",
+            "4234",
+            "3215",
+            "2415",
+            "1234",
+            "246"
+    };
 
     private OnFragmentInteractionListener mListener;
 
-    public ContentFragment() {
+    public ScoreBoardFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ContentFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static ContentFragment newInstance(String param1, String param2) {
-        ContentFragment fragment = new ContentFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_content, container, false);
+        View view = inflater.inflate(R.layout.fragment_score_board, container, false);
+        ListView listScore = (ListView) view.findViewById(R.id.listScoreBoard);
+
+        ArrayList<HashMap<String, String>> listScoreBoard = new ArrayList<>();
+        HashMap<String, String> values;
+        for (int i = 0; i < staticName.length; i++) {
+            values = new HashMap<>();
+            values.put(KEY_NAME, staticName[i]);
+            values.put(KEY_SCORE, staticScore[i]);
+            listScoreBoard.add(values);
+        }
+
+        SimpleAdapter adapter = new SimpleAdapter(getActivity(), listScoreBoard, R.layout.fragment_score_board, new String[]{KEY_NAME, KEY_SCORE}, new int[]{R.id.name_ScoreBoard, R.id.score_ScoreBoard});
+        listScore.setAdapter(adapter);
+
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -78,14 +90,12 @@ public class ContentFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        /*
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
             throw new RuntimeException(context.toString()
                     + " must implement OnFragmentInteractionListener");
         }
-        */
     }
 
     @Override

@@ -1,0 +1,16 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cat.urv.studytraining.studytraining.fragments.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Bienvenido a Strudy Training. En este aplicativo encontrarás un problema diferente cada mes. Dependiendo del grado que estás cursando, se mostrará un problema u otro.  Intenta resolver el problema y supera a tus compañeros para estar en el top ranking de la universidad. Si consigues estar en el top, puedes obtener beneficios! (Dependiendo de la persona que propone el problema)  Participa!"
+        android:id="@+id/home_text"
+        android:layout_gravity="center_horizontal" />
+
+</RelativeLayout>

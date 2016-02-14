@@ -1,6 +1,6 @@
 package cat.urv.studytraining.studytraining;
 
-import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,11 +12,13 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
 
-import cat.urv.studytraining.studytraining.fragments.ContentFragment;
+import cat.urv.studytraining.studytraining.fragments.HomeFragment;
+import cat.urv.studytraining.studytraining.fragments.ScoreBoardFragment;
 
 public class NavigationActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, HomeFragment.OnFragmentInteractionListener, ScoreBoardFragment.OnFragmentInteractionListener {
 
 
     @Override
@@ -40,10 +42,10 @@ public class NavigationActivity extends AppCompatActivity
         {
             Log.e("TAG", "He pasado por aquí");
 
-            ContentFragment contentFragment = new ContentFragment();
+            ScoreBoardFragment homeFragment = new ScoreBoardFragment();
 
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.content_fragment, contentFragment).commit();
+                    .add(R.id.content_fragment, homeFragment).commit();
 
         }
 
@@ -86,19 +88,38 @@ public class NavigationActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+/*
+        FrameLayout content = (FrameLayout) this.findViewById(R.id.content_fragment);
+        if (content != null)
+        {
+            Log.e("TAG", "Estoy en onNavigationItemSelected");
 
-        if (id == R.id.nav_globalscore) {
-            Intent myIntent = new Intent(NavigationActivity.this, GlobalScoreBoard.class);
-            startActivityForResult(myIntent, 0);
-        } else if (id == R.id.nav_info) {
+            ContentFragment contentFragment = new ContentFragment();
 
-        } else if (id == R.id.nav_infoscore) {
-            Intent myIntent = new Intent(NavigationActivity.this, ScoreBoardActivity.class);
-            startActivityForResult(myIntent, 0);
+            if (id == R.id.nav_globalscore) {
+
+            } else if (id == R.id.nav_info) {
+                getSupportFragmentManager().beginTransaction()
+                        .add(R.id.content_fragment, contentFragment).commit();
+            } else if (id == R.id.nav_infoscore) {
+                getSupportFragmentManager().beginTransaction()
+                        .add(R.id.content_fragment, contentFragment).commit();
+            }
+
+
+
+
         }
+
+    */
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 }
