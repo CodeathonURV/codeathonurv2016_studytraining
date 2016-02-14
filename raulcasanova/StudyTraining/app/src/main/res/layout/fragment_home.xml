@@ -5,12 +5,86 @@
     tools:context="cat.urv.studytraining.studytraining.fragments.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Bienvenido a Strudy Training. En este aplicativo encontrarás un problema diferente cada mes. Dependiendo del grado que estás cursando, se mostrará un problema u otro.  Intenta resolver el problema y supera a tus compañeros para estar en el top ranking de la universidad. Si consigues estar en el top, puedes obtener beneficios! (Dependiendo de la persona que propone el problema)  Participa!"
-        android:id="@+id/home_text"
-        android:layout_gravity="center_horizontal" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="¡Bienvenido a Study Training!"
+        android:id="@+id/text_welcome"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="25dp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="En este aplicativo encontrarás un problema diferente cada mes."
+        android:id="@+id/text_home_1"
+        android:paddingTop="18px"
+        android:paddingBottom="18px"
+        android:paddingRight="22px"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/text_welcome"
+        android:layout_alignStart="@+id/text_welcome" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Dependiendo del grado que estás cursando, se mostrará un problema u otro."
+        android:id="@+id/text_home_2"
+        android:paddingTop="18px"
+        android:paddingBottom="18px"
+        android:paddingRight="22px"
+        android:layout_below="@+id/text_home_1"
+        android:layout_alignStart="@+id/text_home_1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Intenta resolver el problema y supera a tus compañeros para estar en el top ranking de la universidad."
+        android:id="@+id/text_home_3"
+        android:paddingTop="18px"
+        android:paddingBottom="18px"
+        android:paddingRight="22px"
+        android:layout_below="@+id/text_home_2"
+        android:layout_alignStart="@+id/text_home_2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Si consigues estar en el top, puedes obtener beneficios! (Dependiendo de la persona que propone el problema)."
+        android:id="@+id/text_home_4"
+        android:paddingTop="18px"
+        android:paddingBottom="18px"
+        android:paddingRight="22px"
+        android:layout_below="@+id/text_home_3"
+        android:layout_alignStart="@+id/text_home_3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="¡Participa!"
+        android:id="@+id/text_join"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="38dp"
+        android:singleLine="false"
+        android:layout_below="@+id/text_home_4"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_join"
+        android:src="@mipmap/ic_home_join"
+        android:layout_below="@+id/text_join"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp" />
 </RelativeLayout>
