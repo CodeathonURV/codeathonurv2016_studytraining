@@ -9,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import cat.urv.studytraining.studytraining.WebActivity;
 import cat.urv.studytraining.studytraining.R;
 
 /**
@@ -47,8 +46,7 @@ public class InformationFragment extends Fragment {
         view.findViewById(R.id.text_question).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent pdfQuestion = new Intent(v.getContext(), WebActivity.class);
-                pdfQuestion.putExtra("DATA_ENTRY", "https://drive.google.com/open?id=0B_BZYki7Pdv9VEw0Qy1JWm9yNVU");
+                Intent pdfQuestion = new Intent(Intent.ACTION_VIEW, Uri.parse("https://drive.google.com/open?id=0B_BZYki7Pdv9VEw0Qy1JWm9yNVU"));
                 startActivity(pdfQuestion);
             }
         });
@@ -56,8 +54,7 @@ public class InformationFragment extends Fragment {
         view.findViewById(R.id.text_data_entry).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent pdfQuestion = new Intent(v.getContext(), WebActivity.class);
-                pdfQuestion.putExtra("DATA_ENTRY", "https://drive.google.com/open?id=0BzvRg-Vq2ZHtVGROdFkxOEpVeGc");
+                Intent pdfQuestion = new Intent(Intent.ACTION_VIEW, Uri.parse("https://drive.google.com/open?id=0BzvRg-Vq2ZHtVGROdFkxOEpVeGc"));
                 startActivity(pdfQuestion);
             }
         });
