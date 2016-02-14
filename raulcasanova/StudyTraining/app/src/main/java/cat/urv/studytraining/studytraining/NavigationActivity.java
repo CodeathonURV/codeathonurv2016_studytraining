@@ -15,10 +15,11 @@ import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
 import cat.urv.studytraining.studytraining.fragments.HomeFragment;
+import cat.urv.studytraining.studytraining.fragments.InformationFragment;
 import cat.urv.studytraining.studytraining.fragments.ScoreBoardFragment;
 
 public class NavigationActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, HomeFragment.OnFragmentInteractionListener, ScoreBoardFragment.OnFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener, HomeFragment.OnFragmentInteractionListener, ScoreBoardFragment.OnFragmentInteractionListener, InformationFragment.OnFragmentInteractionListener {
 
 
     @Override
@@ -103,7 +104,10 @@ public class NavigationActivity extends AppCompatActivity
             }else if (id == R.id.nav_globalscore) {
 
             } else if (id == R.id.nav_info) {
+                InformationFragment infoFragment = new InformationFragment();
 
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.content_fragment, infoFragment).commit();
             } else if (id == R.id.nav_infoscore) {
                 ScoreBoardFragment scoreFragment = new ScoreBoardFragment();
 

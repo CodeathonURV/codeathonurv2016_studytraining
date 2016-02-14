@@ -1,0 +1,154 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cat.urv.studytraining.studytraining.fragments.InformationFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Ronda Actual"
+        android:id="@+id/text_ronda_actual"
+        android:layout_marginTop="41dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/text_start_date"
+        android:paddingTop="15px"
+        android:paddingBottom="15px" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Empieza el Lunes, Feb 15, 01:00 hora local"
+        android:id="@+id/text_start_date"
+        android:layout_marginEnd="28dp"
+        android:layout_below="@+id/text_ronda_actual"
+        android:layout_alignParentEnd="true"
+        android:paddingTop="15px"
+        android:paddingBottom="15px" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Termina el Lunes, Feb 15, 23:55 hora local"
+        android:id="@+id/text_end_date"
+        android:layout_below="@+id/text_start_date"
+        android:layout_alignStart="@+id/text_start_date"
+        android:layout_alignParentStart="false"
+        android:paddingTop="15px"
+        android:paddingBottom="15px" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Descargar"
+        android:id="@+id/text_download"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/text_end_date"
+        android:layout_alignEnd="@+id/text_ronda_actual"
+        android:layout_marginEnd="15dp"
+        android:paddingBottom="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="A continuación se encuentra el enunciado del problema en formato PDF."
+        android:id="@+id/text_info_1"
+        android:layout_below="@+id/text_download"
+        android:layout_alignStart="@+id/text_download"
+        android:paddingTop="18px"
+        android:paddingBottom="18px" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Además, si es necesario, también se encuentran los archivos para recoger la información."
+        android:id="@+id/text_info_2"
+        android:paddingTop="18px"
+        android:paddingBottom="18px"
+        android:layout_below="@+id/text_info_1"
+        android:layout_alignStart="@+id/text_info_1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Enunciado del problema"
+        android:id="@+id/text_question"
+        android:layout_marginTop="47dp"
+        android:layout_below="@+id/text_info_2"
+        android:layout_alignStart="@+id/text_end_date"
+        android:layout_marginEnd="15dp"
+        android:paddingTop="18px"
+        android:paddingBottom="18px"
+        android:textColor="#2434ca" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Datos de entrada"
+        android:id="@+id/text_data_entry"
+        android:layout_below="@+id/text_question"
+        android:layout_alignStart="@+id/text_question"
+        android:layout_marginEnd="15dp"
+        android:paddingTop="18px"
+        android:paddingBottom="18px"
+        android:textColor="#2434ca" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_label"
+        android:src="@mipmap/ic_info_label"
+        android:layout_alignTop="@+id/text_ronda_actual"
+        android:layout_alignStart="@+id/text_download"
+        android:layout_above="@+id/text_start_date"
+        android:layout_toStartOf="@+id/text_ronda_actual" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_start"
+        android:src="@mipmap/ic_info_start"
+        android:layout_alignTop="@+id/text_start_date"
+        android:layout_alignStart="@+id/img_label"
+        android:layout_above="@+id/text_end_date"
+        android:layout_toStartOf="@+id/text_start_date" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_end"
+        android:src="@mipmap/ic_info_end"
+        android:layout_below="@+id/text_start_date"
+        android:layout_alignStart="@+id/img_start"
+        android:layout_toStartOf="@+id/text_start_date"
+        android:layout_alignBottom="@+id/text_end_date" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_question"
+        android:src="@mipmap/ic_info_question"
+        android:layout_alignTop="@+id/text_question"
+        android:layout_toStartOf="@+id/text_question"
+        android:layout_above="@+id/text_data_entry" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_data"
+        android:src="@mipmap/ic_info_download"
+        android:layout_below="@+id/text_question"
+        android:layout_toStartOf="@+id/text_data_entry" />
+
+
+</RelativeLayout>
