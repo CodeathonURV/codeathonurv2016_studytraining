@@ -6,7 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="cat.urv.studytraining.studytraining.fragments.ScoreBoardFragment">
+    tools:context="cat.urv.studytraining.studytraining.fragments.GlobalScoreFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <ListView android:id="@+id/listGlobalScore"
@@ -20,7 +20,7 @@
         android:layout_alignStart="@+id/listGlobalScore"
         android:layout_alignParentTop="true" />
 
-    <TextView android:id="@+id/score_ScoreBoard"
+    <TextView android:id="@+id/score_GlobalScore"
         android:layout_width="50dip"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/listGlobalScore"

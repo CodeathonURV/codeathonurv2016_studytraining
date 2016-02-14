@@ -18,10 +18,10 @@ import cat.urv.studytraining.studytraining.R;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link ScoreBoardFragment.OnFragmentInteractionListener} interface
+ * {@link GlobalScoreFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
  */
-public class ScoreBoardFragment extends Fragment {
+public class GlobalScoreFragment extends Fragment {
 
     private static final String KEY_NAME = "KEY_NAME";
     private static final String KEY_SCORE = "KEY_SCORE";
@@ -30,27 +30,27 @@ public class ScoreBoardFragment extends Fragment {
             "Raúl Casanova Marqués",
             "Jordi Merino Domingo",
             "Oriol Mauri Guiu",
-            "Ana Lopez Rubio",
-            "David Reyes Garcia",
-            "Silvia Lopez Clotet",
-            "Nuria Fernandez Diaz",
-            "Diego Hernandez Castillo"
+            "Lucia Gonzalez Abellán",
+            "Irene Salvador Aguiló",
+            "David Lopez Alarcón",
+            "Laura Beltrán Bernat",
+            "Jose Mateos Pozo"
     };
 
     private static final String[] staticScore = {
-            "12543",
-            "8546",
-            "7456",
-            "4234",
-            "3215",
-            "2415",
-            "1234",
-            "246"
+            "21548",
+            "19845",
+            "15694",
+            "7568",
+            "6782",
+            "4526",
+            "3574",
+            "1555"
     };
 
     private OnFragmentInteractionListener mListener;
 
-    public ScoreBoardFragment() {
+    public GlobalScoreFragment() {
         // Required empty public constructor
     }
 
@@ -58,21 +58,20 @@ public class ScoreBoardFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_score_board, container, false);
+        View view = inflater.inflate(R.layout.fragment_global_score, container, false);
         ListView listScore = (ListView) view.findViewById(R.id.listGlobalScore);
 
-        ArrayList<HashMap<String, String>> listScoreBoard = new ArrayList<>();
+        ArrayList<HashMap<String, String>> listGlobalScoreBoard = new ArrayList<>();
         HashMap<String, String> values;
         for (int i = 0; i < staticName.length; i++) {
             values = new HashMap<>();
             values.put(KEY_NAME, staticName[i]);
             values.put(KEY_SCORE, staticScore[i]);
-            listScoreBoard.add(values);
+            listGlobalScoreBoard.add(values);
         }
 
-        SimpleAdapter adapter = new SimpleAdapter(getActivity(), listScoreBoard, R.layout.fragment_score_board, new String[]{KEY_NAME, KEY_SCORE}, new int[]{R.id.name_GlobalScore, R.id.score_ScoreBoard});
+        SimpleAdapter adapter = new SimpleAdapter(getActivity(), listGlobalScoreBoard, R.layout.fragment_global_score, new String[]{KEY_NAME, KEY_SCORE}, new int[]{R.id.name_GlobalScore, R.id.score_GlobalScore});
         listScore.setAdapter(adapter);
 
 

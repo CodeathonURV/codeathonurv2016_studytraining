@@ -14,12 +14,13 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
+import cat.urv.studytraining.studytraining.fragments.GlobalScoreFragment;
 import cat.urv.studytraining.studytraining.fragments.HomeFragment;
 import cat.urv.studytraining.studytraining.fragments.InformationFragment;
 import cat.urv.studytraining.studytraining.fragments.ScoreBoardFragment;
 
 public class NavigationActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, HomeFragment.OnFragmentInteractionListener, ScoreBoardFragment.OnFragmentInteractionListener, InformationFragment.OnFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener, HomeFragment.OnFragmentInteractionListener, GlobalScoreFragment.OnFragmentInteractionListener, InformationFragment.OnFragmentInteractionListener, ScoreBoardFragment.OnFragmentInteractionListener {
 
 
     @Override
@@ -41,13 +42,10 @@ public class NavigationActivity extends AppCompatActivity
         FrameLayout content = (FrameLayout) this.findViewById(R.id.content_fragment);
         if (content != null)
         {
-            Log.e("TAG", "He pasado por aquí");
-
-            HomeFragment homeFragment = new HomeFragment();
+             HomeFragment homeFragment = new HomeFragment();
 
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.content_fragment, homeFragment).commit();
-
         }
 
     }
@@ -84,14 +82,12 @@ public class NavigationActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
 
         FrameLayout content = (FrameLayout) this.findViewById(R.id.content_fragment);
         if (content != null) {
-            Log.e("TAG", "Estoy en onNavigationItemSelected");
 
             int id = item.getItemId();
 
@@ -102,7 +98,10 @@ public class NavigationActivity extends AppCompatActivity
                         .replace(R.id.content_fragment, homeFragment).commit();
 
             }else if (id == R.id.nav_globalscore) {
+                GlobalScoreFragment globalFragment = new GlobalScoreFragment();
 
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.content_fragment, globalFragment).commit();
             } else if (id == R.id.nav_info) {
                 InformationFragment infoFragment = new InformationFragment();
 

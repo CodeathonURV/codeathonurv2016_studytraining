@@ -6,24 +6,23 @@
             android:id="@+id/nav_home"
             android:icon="@mipmap/ic_menu_home"
             android:title="Inicio" />
-
         <item
             android:id="@+id/nav_globalscore"
             android:icon="@mipmap/ic_menu_score"
-            android:title="ScoreBoard Global" />
-    </group>
+            android:title="Ranking Global" />
 
-    <item android:title="Informática">
-        <menu>
-            <item
-                android:id="@+id/nav_info"
-                android:icon="@mipmap/ic_menu_description"
-                android:title="Información" />
-            <item
-                android:id="@+id/nav_infoscore"
-                android:icon="@mipmap/ic_menu_score"
-                android:title="Scores" />
-        </menu>
-    </item>
+        <item android:title="Informática">
+            <menu>
+                <item
+                    android:id="@+id/nav_info"
+                    android:icon="@mipmap/ic_menu_description"
+                    android:title="Información" />
+                <item
+                    android:id="@+id/nav_infoscore"
+                    android:icon="@mipmap/ic_menu_score"
+                    android:title="Ranking" />
+            </menu>
+        </item>
+    </group>
 
 </menu>
