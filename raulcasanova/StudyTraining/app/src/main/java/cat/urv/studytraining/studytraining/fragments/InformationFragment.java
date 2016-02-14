@@ -1,6 +1,7 @@
 package cat.urv.studytraining.studytraining.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import cat.urv.studytraining.studytraining.WebActivity;
 import cat.urv.studytraining.studytraining.R;
 
 /**
@@ -32,11 +34,34 @@ public class InformationFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_information, container, false);
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
         }
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        view.findViewById(R.id.text_question).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent pdfQuestion = new Intent(v.getContext(), WebActivity.class);
+                pdfQuestion.putExtra("DATA_ENTRY", "https://drive.google.com/open?id=0B_BZYki7Pdv9VEw0Qy1JWm9yNVU");
+                startActivity(pdfQuestion);
+            }
+        });
+
+        view.findViewById(R.id.text_data_entry).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent pdfQuestion = new Intent(v.getContext(), WebActivity.class);
+                pdfQuestion.putExtra("DATA_ENTRY", "https://drive.google.com/open?id=0BzvRg-Vq2ZHtVGROdFkxOEpVeGc");
+                startActivity(pdfQuestion);
+            }
+        });
+
     }
 
     @Override
@@ -67,7 +92,6 @@ public class InformationFragment extends Fragment {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
 }
