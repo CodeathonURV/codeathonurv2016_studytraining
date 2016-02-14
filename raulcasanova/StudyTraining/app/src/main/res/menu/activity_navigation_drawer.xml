@@ -3,8 +3,13 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_home"
+            android:icon="@mipmap/ic_menu_home"
+            android:title="Inicio" />
+
+        <item
             android:id="@+id/nav_globalscore"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@mipmap/ic_menu_score"
             android:title="ScoreBoard Global" />
     </group>
 
@@ -12,11 +17,11 @@
         <menu>
             <item
                 android:id="@+id/nav_info"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@mipmap/ic_menu_description"
                 android:title="Información" />
             <item
                 android:id="@+id/nav_infoscore"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@mipmap/ic_menu_score"
                 android:title="Scores" />
         </menu>
     </item>
