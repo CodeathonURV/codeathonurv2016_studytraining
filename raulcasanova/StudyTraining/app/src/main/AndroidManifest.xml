@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Navigation"
+            android:name=".NavigationActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ScoreBoardActivity" />
-        <activity android:name=".GlobalScoreBoard"></activity>
+        <activity android:name=".GlobalScoreBoard" />
+        <activity android:name=".ProblemActivity"></activity>
     </application>
 
 </manifest>

@@ -8,10 +8,14 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.FrameLayout;
 
-public class Navigation extends AppCompatActivity
+import cat.urv.studytraining.studytraining.fragments.ContentFragment;
+
+public class NavigationActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
 
@@ -30,6 +34,19 @@ public class Navigation extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        FrameLayout content = (FrameLayout) this.findViewById(R.id.content_fragment);
+        if (content != null)
+        {
+            Log.e("TAG", "He pasado por aquí");
+
+            ContentFragment contentFragment = new ContentFragment();
+
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.content_fragment, contentFragment).commit();
+
+        }
+
     }
 
     @Override
@@ -71,12 +88,12 @@ public class Navigation extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_globalscore) {
-            Intent myIntent = new Intent(Navigation.this, GlobalScoreBoard.class);
+            Intent myIntent = new Intent(NavigationActivity.this, GlobalScoreBoard.class);
             startActivityForResult(myIntent, 0);
         } else if (id == R.id.nav_info) {
 
         } else if (id == R.id.nav_infoscore) {
-            Intent myIntent = new Intent(Navigation.this, ScoreBoardActivity.class);
+            Intent myIntent = new Intent(NavigationActivity.this, ScoreBoardActivity.class);
             startActivityForResult(myIntent, 0);
         }
 
