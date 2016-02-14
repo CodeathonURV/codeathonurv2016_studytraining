@@ -8,83 +8,83 @@
 
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="¡Bienvenido a Study Training!"
         android:id="@+id/text_welcome"
-        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="25dp" />
+        android:layout_marginTop="25dp"
+        android:text="¡Bienvenido a Study Training!"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="En este aplicativo encontrarás un problema diferente cada mes."
         android:id="@+id/text_home_1"
-        android:paddingTop="18px"
-        android:paddingBottom="18px"
-        android:paddingRight="22px"
-        android:layout_marginTop="29dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/text_welcome"
         android:layout_below="@+id/text_welcome"
-        android:layout_alignStart="@+id/text_welcome" />
+        android:layout_marginTop="29dp"
+        android:paddingBottom="18px"
+        android:paddingRight="22px"
+        android:paddingTop="18px"
+        android:text="En este aplicativo encontrarás un problema diferente cada mes."
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Dependiendo del grado que estás cursando, se mostrará un problema u otro."
         android:id="@+id/text_home_2"
-        android:paddingTop="18px"
-        android:paddingBottom="18px"
-        android:paddingRight="22px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/text_home_1"
         android:layout_below="@+id/text_home_1"
-        android:layout_alignStart="@+id/text_home_1" />
+        android:paddingBottom="18px"
+        android:paddingRight="22px"
+        android:paddingTop="18px"
+        android:text="Dependiendo del grado que estás cursando, se mostrará un problema u otro."
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Intenta resolver el problema y supera a tus compañeros para estar en el top ranking de la universidad."
         android:id="@+id/text_home_3"
-        android:paddingTop="18px"
-        android:paddingBottom="18px"
-        android:paddingRight="22px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/text_home_2"
         android:layout_below="@+id/text_home_2"
-        android:layout_alignStart="@+id/text_home_2" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Si consigues estar en el top, puedes obtener beneficios! (Dependiendo de la persona que propone el problema)."
-        android:id="@+id/text_home_4"
-        android:paddingTop="18px"
         android:paddingBottom="18px"
         android:paddingRight="22px"
-        android:layout_below="@+id/text_home_3"
-        android:layout_alignStart="@+id/text_home_3" />
+        android:paddingTop="18px"
+        android:text="Intenta resolver el problema y supera a tus compañeros para estar en el top ranking de la universidad."
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
+        android:id="@+id/text_home_4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="¡Participa!"
+        android:layout_alignStart="@+id/text_home_3"
+        android:layout_below="@+id/text_home_3"
+        android:paddingBottom="18px"
+        android:paddingRight="22px"
+        android:paddingTop="18px"
+        android:text="Si consigues estar en el top, puedes obtener beneficios! (Dependiendo de la persona que propone el problema)."
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
         android:id="@+id/text_join"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_home_4"
+        android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="38dp"
         android:singleLine="false"
-        android:layout_below="@+id/text_home_4"
-        android:layout_centerHorizontal="true" />
+        android:text="¡Participa!"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <ImageView
+        android:id="@+id/img_join"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/img_join"
-        android:src="@mipmap/ic_home_join"
         android:layout_below="@+id/text_join"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp" />
+        android:layout_marginTop="24dp"
+        android:src="@mipmap/ic_home_join" />
 </RelativeLayout>

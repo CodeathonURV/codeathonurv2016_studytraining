@@ -8,11 +8,9 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
-import android.widget.RelativeLayout;
 
 import cat.urv.studytraining.studytraining.fragments.GlobalScoreFragment;
 import cat.urv.studytraining.studytraining.fragments.HomeFragment;
@@ -40,9 +38,8 @@ public class NavigationActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         FrameLayout content = (FrameLayout) this.findViewById(R.id.content_fragment);
-        if (content != null)
-        {
-             HomeFragment homeFragment = new HomeFragment();
+        if (content != null) {
+            HomeFragment homeFragment = new HomeFragment();
 
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.content_fragment, homeFragment).commit();
@@ -97,7 +94,7 @@ public class NavigationActivity extends AppCompatActivity
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.content_fragment, homeFragment).commit();
 
-            }else if (id == R.id.nav_globalscore) {
+            } else if (id == R.id.nav_globalscore) {
                 GlobalScoreFragment globalFragment = new GlobalScoreFragment();
 
                 getSupportFragmentManager().beginTransaction()

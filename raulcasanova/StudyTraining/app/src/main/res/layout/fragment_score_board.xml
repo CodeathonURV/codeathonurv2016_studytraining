@@ -9,18 +9,20 @@
     tools:context="cat.urv.studytraining.studytraining.fragments.ScoreBoardFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <ListView android:id="@+id/listGlobalScore"
+    <ListView
+        android:id="@+id/listGlobalScore"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    </ListView>
+        android:layout_height="wrap_content"></ListView>
 
-    <TextView android:id="@+id/name_GlobalScore"
+    <TextView
+        android:id="@+id/name_GlobalScore"
         android:layout_width="300dip"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/listGlobalScore"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/listGlobalScore" />
 
-    <TextView android:id="@+id/score_ScoreBoard"
+    <TextView
+        android:id="@+id/score_ScoreBoard"
         android:layout_width="50dip"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/listGlobalScore"
