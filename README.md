@@ -5,4 +5,5 @@
 <b>3-</b> Run XAMPP Apache as Admin <br/>
 <b>4-</b> Open your Browser:<br/>
 <b>5-</b> Write in your tap navigation: localhost/codeathonurv2016_studytraining/index.php<br/>
+<b>login</b>: User1: jordi, Passwor1: jordi (Informatico), User2: pepe, Password2: pepe (Telematico)
 ###Run!
