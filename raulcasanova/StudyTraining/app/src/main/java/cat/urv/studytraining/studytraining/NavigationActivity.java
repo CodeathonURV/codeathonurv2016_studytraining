@@ -42,7 +42,7 @@ public class NavigationActivity extends AppCompatActivity
         {
             Log.e("TAG", "He pasado por aquí");
 
-            ScoreBoardFragment homeFragment = new ScoreBoardFragment();
+            HomeFragment homeFragment = new HomeFragment();
 
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.content_fragment, homeFragment).commit();
@@ -87,31 +87,30 @@ public class NavigationActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-        int id = item.getItemId();
-/*
+
         FrameLayout content = (FrameLayout) this.findViewById(R.id.content_fragment);
-        if (content != null)
-        {
+        if (content != null) {
             Log.e("TAG", "Estoy en onNavigationItemSelected");
 
-            ContentFragment contentFragment = new ContentFragment();
+            int id = item.getItemId();
 
-            if (id == R.id.nav_globalscore) {
+            if (id == R.id.nav_home) {
+                HomeFragment homeFragment = new HomeFragment();
+
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.content_fragment, homeFragment).commit();
+
+            }else if (id == R.id.nav_globalscore) {
 
             } else if (id == R.id.nav_info) {
-                getSupportFragmentManager().beginTransaction()
-                        .add(R.id.content_fragment, contentFragment).commit();
+
             } else if (id == R.id.nav_infoscore) {
+                ScoreBoardFragment scoreFragment = new ScoreBoardFragment();
+
                 getSupportFragmentManager().beginTransaction()
-                        .add(R.id.content_fragment, contentFragment).commit();
+                        .replace(R.id.content_fragment, scoreFragment).commit();
             }
-
-
-
-
         }
-
-    */
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
